@@ -380,6 +380,22 @@ document.addEventListener("DOMContentLoaded", () => {
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
+
+
+<script>
+  const email = "accessnetjatimulya@gmail.com";
+
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
+  // Android → paksa ke Gmail Compose App via mailto
+  // PC → paksa ke Gmail Compose Web
+  const link = isAndroid
+    ? `mailto:${email}`
+    : `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+
+  document.getElementById("emailLink").href = link;
+</script>
+
 </body>
 
 </html>
